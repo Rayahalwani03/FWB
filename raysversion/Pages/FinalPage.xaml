@@ -19,21 +19,15 @@
                                   Margin="10">
                     <StackLayout WidthRequest="400" >
                         <Label Text="STUDENT" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold"/>
-                        <ListView x:Name="Student_List_View">
+                        <ListView x:Name="Student_List_View" ItemTapped="Student_List_View_ItemTapped">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
                                         <StackLayout Orientation="Horizontal">
 
-
-                                            <Label Text="{Binding EnrollmentID}"/>
                                             <Label Text="{Binding StudentID}"/>
-                                            <Label Text="{Binding CourseID}"/>
-                                            <Button Text="Delete"
-                                                x:Name="Delete"
-                                                BackgroundColor="Gray"
-                                                BindingContext="{Binding EnrollmentID}"
-                                                Clicked="Delete_Clicked"/>
+                                            <Label Text="{Binding StudentName}"/>
+                                            <Label Text="{Binding StudentDepartment}"/>
 
 
                                         </StackLayout>
@@ -53,12 +47,16 @@
 
                     <StackLayout WidthRequest="400" >
                         <Label Text="COURSE" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold" />
-                        <ListView x:Name="Course_List_View">
+                        <ListView x:Name="Course_List_View" ItemTapped="Course_List_View_ItemTapped">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <StackLayout Orientation="Vertical">
+                                        <StackLayout>
 
+
+                                            <Label Text="{Binding CourseID}"/>
+                                            <Label Text="{Binding CourseCode}"/>
+                                            <Label Text="{Binding CourseName}"/>
 
                                         </StackLayout>
                                     </ViewCell>
@@ -92,6 +90,14 @@
                                 <ViewCell>
                                     <StackLayout Orientation="Vertical">
 
+                                        <Label Text="{Binding EnrollmentID}"/>
+                                        <Label Text="{Binding StudentID}"/>
+                                        <Label Text="{Binding CourseID}"/>
+                                        <Button Text="Delete"
+                                                x:Name="Delete"
+                                                BackgroundColor="Gray"
+                                                BindingContext="{Binding EnrollmentID}"
+                                                Clicked="Delete_Clicked"/>
 
                                     </StackLayout>
                                 </ViewCell>

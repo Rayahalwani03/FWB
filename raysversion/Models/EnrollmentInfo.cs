@@ -11,7 +11,7 @@ namespace raysversion.Models
     {
         [PrimaryKey, AutoIncrement]
         public int EnrollmentID { get; set; }
-        public string StudentID { get; set; }
-        public string CourseID { get; set; }
+        public int StudentID { get; set; }
+        public int CourseID { get; set; }
     }
 }
