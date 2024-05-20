@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace raysversion.DataTransactions
 {
     public class DBTrans
@@ -83,7 +84,7 @@ namespace raysversion.DataTransactions
             return conn.Table<EnrollmentInfo>().ToList();
         }
 
-        public void AddEnrollments(EnrollmentInfo enrollment)
+        public void AddEnrollment(EnrollmentInfo enrollment)
         {
             conn = new SQLiteConnection(this.dbPath);
             conn.Insert(enrollment);

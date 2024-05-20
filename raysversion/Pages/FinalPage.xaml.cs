@@ -12,19 +12,9 @@ public partial class FinalPage : ContentPage
 		InitializeComponent();
         Student_List_View.ItemsSource = App.DBTrans.GetALLStudents();
         Course_List_View.ItemsSource = App.DBTrans.GetAllCourses();
-	}
-    private void Add_Button_Clicked(object sender, EventArgs e)
-    {
-
-        App.DBTrans.AddEnrollments(new Models.EnrollmentInfo
-        {
-            StudentID = stuID,
-            CourseID = crsID
-
-
-        });
         Enroll_List_View.ItemsSource = App.DBTrans.GetAllEnrollments();
-    }
+	}
+    
 
     private void Show_Button_Clicked(object sender, EventArgs e)
     {
@@ -47,5 +37,18 @@ public partial class FinalPage : ContentPage
     {
         var course = e.Item as CourseInfo;
         crsID = course.CourseID;
+    }
+
+    private void Add_Button_Clicked(object sender, EventArgs e)
+    {
+
+        App.DBTrans.AddEnrollment(new Models.EnrollmentInfo
+        {
+            StudentID = stuID,
+            CourseID = crsID
+
+
+        });
+        Enroll_List_View.ItemsSource = App.DBTrans.GetAllEnrollments();
     }
 }

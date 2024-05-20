@@ -4,7 +4,7 @@
              x:Class="raysversion.FinalPage"
          Title="Final Page">
 
-    <VerticalStackLayout  BackgroundColor="Gray" >
+    <ScrollView  BackgroundColor="Gray" >
         <StackLayout Orientation="Vertical"  BackgroundColor="Cyan" Margin="20" Padding="40">
 
             <Label Text="Select" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold"/>
@@ -51,11 +51,14 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
 
-
+                                            <Label Text="1"/>
+                                     
                                             <Label Text="{Binding CourseID}"/>
+                                            <Label Text="2"/>
                                             <Label Text="{Binding CourseCode}"/>
+                                            <Label Text="3"/>
                                             <Label Text="{Binding CourseName}"/>
 
                                         </StackLayout>
@@ -108,5 +111,5 @@
             </Frame>
 
         </StackLayout>
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
