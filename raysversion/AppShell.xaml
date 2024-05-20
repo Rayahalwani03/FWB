@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="raysversion.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:raysversion"
+    Shell.FlyoutBehavior="Disabled"
+ Title="project">
+
+    <TabBar>
+
+        <Tab Title="MainPage" Icon="mainnpage.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+
+        </Tab>
+
+        <Tab Title="Student" Icon="student.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:StudentPage}" Route="StudentPage" />
+
+        </Tab>
+
+        <Tab Title="Course" Icon="course.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:CoursePage}" Route="CourrsePage" />
+
+        </Tab>
+
+        <Tab Title="Final" Icon="finalll.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:FinalPage}" Route="FinalPage" />
+        </Tab>
+
+    </TabBar>
+
+</Shell>
