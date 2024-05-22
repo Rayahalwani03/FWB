@@ -4,7 +4,7 @@
              x:Class="raysversion.StudentPage"
                      Title="Student Page">
     
-    <VerticalStackLayout  BackgroundColor="Gray" >
+    <ScrollView  BackgroundColor="Gray" >
         <StackLayout Orientation="Vertical"  BackgroundColor="Cyan" Margin="20" Padding="40">
 
             <Label Text="Add Student" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold"/>
@@ -78,5 +78,5 @@
 
         </StackLayout>
 
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

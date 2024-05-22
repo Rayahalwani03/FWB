@@ -18,11 +18,16 @@ public partial class FinalPage : ContentPage
 
     private void Show_Button_Clicked(object sender, EventArgs e)
     {
-
+        Enroll_List_View.ItemsSource = App.DBTrans.GetAllEnrollments();
     }
 
     private void Delete_Clicked(object sender, EventArgs e)
     {
+
+        Button button = (Button)sender;
+        App.DBTrans.DeleteEnrollments((int)button.BindingContext);
+        Enroll_List_View.ItemsSource = App.DBTrans.GetAllEnrollments();
+
 
     }
 
